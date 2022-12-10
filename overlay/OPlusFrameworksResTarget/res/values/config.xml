@@ -482,4 +482,7 @@
          without impacting power, performance, and app compatibility (e.g. protected content). -->
     <bool name="config_reduceBrightColorsAvailable">false</bool>
 
+    <!-- Whether devices supports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
 </resources>
