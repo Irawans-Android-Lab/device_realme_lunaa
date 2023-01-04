@@ -12,6 +12,9 @@ DEVICE_PATH := device/realme/lunaa
 # Display
 TARGET_SCREEN_DENSITY := 450
 
+# HIDL
+DEVICE_MANIFEST_FILE += hardware/st/nfc/aidl/nfc-service-default.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/oplus_yupik_QGKI.config
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=realme
