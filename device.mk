@@ -177,6 +177,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OplusDoze
 
+# Dex
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    dalvik.vm.dex2oat-filter=everything \
+    dalvik.vm.image-dex2oat-filter=everything
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
