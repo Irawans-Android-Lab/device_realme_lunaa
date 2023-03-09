@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,7 +7,7 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-DEVICE_PATH := device/oneplus/lemonade
+DEVICE_PATH := device/realme/lunaa
 
 # A/B
 AB_OTA_UPDATER := true
@@ -65,6 +65,9 @@ TARGET_SCREEN_DENSITY := 450
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
+# Kernel
+TARGET_KERNEL_CONFIG += vendor/oplus_yupik_QGKI.config
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
@@ -152,9 +155,9 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
-BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE ?= 5591007232
+BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 10196353024 # BOARD_SUPER_PARTITION_SIZE - 4MB
 BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
-BOARD_SUPER_PARTITION_SIZE ?= 11190403072
+BOARD_SUPER_PARTITION_SIZE := 10200547328
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
@@ -233,4 +236,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/lemonade/BoardConfigVendor.mk
+include vendor/realme/lunaa/BoardConfigVendor.mk

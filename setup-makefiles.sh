@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=lemonade
-VENDOR=oneplus
+DEVICE=lunaa
+VENDOR=realme
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
