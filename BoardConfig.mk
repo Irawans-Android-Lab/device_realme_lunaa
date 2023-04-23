@@ -14,6 +14,7 @@ TARGET_SCREEN_DENSITY := 450
 
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/oplus_yupik_QGKI.config
+TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=realme
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/chg_enable
