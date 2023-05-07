@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lunaa.mk
+    $(LOCAL_DIR)/nad_lunaa.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_lunaa-user \
-    lineage_lunaa-userdebug \
-    lineage_lunaa-eng
+    nad_lunaa-user \
+    nad_lunaa-userdebug \
+    nad_lunaa-eng
