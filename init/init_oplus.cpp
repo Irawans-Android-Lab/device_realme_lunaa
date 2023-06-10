@@ -49,4 +49,7 @@ void vendor_load_properties() {
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
     }
+
+    // SafetyNet workaround
+    OverrideProperty("ro.boot.verifiedbootstate", "green");
 }
