@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter lemonade lemonadep lunaa martini,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),lemonade)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
