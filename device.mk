@@ -374,7 +374,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
+    als_correction_service.lunaa \
+    android.hardware.sensors@2.0-service.multihal.lunaa \
     libsensorndkbridge \
     sensors.oplus
 
@@ -396,11 +397,6 @@ PRODUCT_COPY_FILES += \
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
-
-# Sensors
-PRODUCT_PACKAGES += \
-    als_correction_service.lunaa \
-    android.hardware.sensors@2.0-service.multihal.lunaa
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
