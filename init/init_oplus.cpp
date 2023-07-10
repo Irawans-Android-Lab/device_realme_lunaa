@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <vector>
+#include <string>
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 
@@ -10,6 +12,17 @@
 #include <sys/_system_properties.h>
 
 using android::base::GetProperty;
+
+std::vector<std::string> ro_props_default_source_order = {
+    "",
+    "bootimage.",
+    "odm.",
+    "product.",
+    "system.",
+    "system_ext.",
+    "vendor.",
+    "vendor_dlkm.",
+};
 
 /*
  * SetProperty does not allow updating read only properties and as a result
@@ -24,6 +37,27 @@ void OverrideProperty(const char* name, const char* value) {
         __system_property_update(pi, value, valuelen);
     } else {
         __system_property_add(name, strlen(name), value, valuelen);
+    }
+}
+
+/*
+ * Spoof build fingerprint and description
+ * Workaround for passing snet
+ */
+void spoof_fp_desc() {
+    std::string build_desc = "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys";
+    std::string build_fingerprint = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys";
+
+    const auto set_ro_build_prop = [](const std::string &source,
+                                      const std::string &prop, const std::string &value) {
+        auto prop_name = "ro." + source + "build." + prop;
+        OverrideProperty(prop_name.c_str(), value.c_str());
+    };
+
+    OverrideProperty("ro.build.description", build_desc.c_str());
+    for (const auto &source : ro_props_default_source_order)
+    {
+        set_ro_build_prop(source, "fingerprint", build_fingerprint.c_str());
     }
 }
 
@@ -49,6 +83,8 @@ void vendor_load_properties() {
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
     }
+
+    spoof_fp_desc();
 
     // SafetyNet workaround
     OverrideProperty("ro.boot.verifiedbootstate", "green");
