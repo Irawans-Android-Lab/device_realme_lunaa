@@ -298,7 +298,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st \
-    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     SecureElement \
     NfcNci \
@@ -372,9 +371,12 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
     libprotobuf-cpp-full \
     librmnetctl
+
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
