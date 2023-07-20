@@ -26,7 +26,6 @@ TARGET_SCREEN_WIDTH := 1080
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st \
-    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     SecureElement \
     NfcNci \
