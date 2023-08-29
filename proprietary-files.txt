@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Realme GT Master Edition (RMX3360_11.F.07).
+## are from Realme GT Master Edition (RMX3360_11.F.12(EX01)).
 
 # ACDB
 odm/etc/acdbdata/Bluetooth_cal.acdb
@@ -608,6 +608,7 @@ odm/lib64/libFaceBeautyPre.so
 odm/lib64/libFaceDistortionCorrection.so
 odm/lib64/libFaceWhiten.so
 odm/lib64/libFilterWrapper.so
+odm/lib64/libImageWarpMask.so
 odm/lib64/libOGLManager.so
 odm/lib64/libOPLUS_SCPortrait.so
 odm/lib64/libPerfectColor.so
@@ -691,6 +692,7 @@ odm/lib64/libmpbase.so
 odm/lib64/libop-ai-beauty-body-detection.so
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/libormshalclient.so
+odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensehalclient.so
 odm/lib64/libsnpe_dsp_domains_v2.so
 odm/lib64/libsnpe_dsp_domains_v3.so
@@ -705,8 +707,9 @@ odm/lib64/libtriplecam_image_optical_zoom.so
 odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
 odm/lib64/libwatermark_photo.so
-odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
+odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 vendor/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode
 vendor/lib/libcamxexternalformatutils.so
@@ -834,6 +837,7 @@ vendor/lib64/libjpege.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfec.so
 vendor/lib64/libmidasserviceintf.so
+vendor/lib64/libmidasserviceintf_aidl.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_faceproc.so
@@ -858,8 +862,9 @@ vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|436cd1f351daaee8d8068c790005e814c6e4cdb6|74cb9bfeeb96df0b707654d662042133ffb23c1a
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|63275ec1fa675dd76d24587b98b4cf8a9f39de22
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -877,7 +882,9 @@ odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/anc.hal.so
 odm/lib64/libgf_hal_G3.so
-odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
+odm/lib64/libolc_vnd.so
+odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
 odm/vendor/firmware/ancap64.b00
 odm/vendor/firmware/ancap64.b01
 odm/vendor/firmware/ancap64.b02
@@ -915,8 +922,8 @@ odm/etc/nfc/st21nfc_fw.bin_st21h:vendor/firmware/st21nfc_fw.bin
 odm/etc/nfc/st21nfc_fw7.bin_st21h:vendor/firmware/st21nfc_fw7.bin
 
 # Sensors
-odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
-odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
+odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service
+odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc
 odm/etc/sensor/config/alsps.json
 odm/etc/sensor/config/kodiak_ak991x_0.json
 odm/etc/sensor/config/kodiak_alsps.json
@@ -926,8 +933,8 @@ odm/etc/sensor/config/kodiak_lsm6ds3c_0.json
 odm/etc/sensor/config/kodiak_mmc5603x_0.json
 odm/etc/sensor/config/kodiak_mmc56x3x_0.json
 odm/etc/sensor/sensor_config.json
-odm/etc/vintf/manifest/manifest_oplusSensor.xml
-odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
+odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
+odm/lib64/vendor.oplus.hardware.oplusSensor-V1-ndk_platform.so
 
 # Touchpanel firmware
 odm/firmware/tp/21603/FW_FT3518_SAMSUNG.img

@@ -48,10 +48,8 @@
             <instance>oplusimsradio1</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.oplusSensor</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
         <interface>
             <name>ISensorFeature</name>
             <instance>default</instance>
