@@ -99,6 +99,8 @@ odm/etc/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt
 odm/etc/bt/msnv11.bin
 
 # Camera
+my_product/etc/camera/engineer_camera_config:system_ext/etc/camera/engineer_camera_config
+odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 odm/etc/camera/aicolor/duallut_background.bmp
 odm/etc/camera/aicolor/duallut_portrait.bmp
 odm/etc/camera/anc/fusion_model
@@ -566,6 +568,9 @@ odm/etc/camera/mtStereoParams.bin
 odm/etc/camera/mwStereoParams.bin
 odm/etc/camera/settings_fdc.txt
 odm/etc/camera/wide.bin
+odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc
+odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
+odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/lib/libDeVIS.so
 odm/lib/libVDBlurlessAPI_v2.so
 odm/lib/libc++_shared.so
@@ -711,6 +716,8 @@ odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
+odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
 vendor/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/camera/components/com.arcsoft.node.eisv2.so
