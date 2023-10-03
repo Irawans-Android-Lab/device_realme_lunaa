@@ -477,4 +477,9 @@
         <item>96</item>   <!-- <item>sensorRadius</item> -->
     </integer-array>
 
+    <!-- Control whether bright color reduction is available. This should only be enabled on devices
+         that have a HWC implementation that can apply the matrix passed to setColorTransform
+         without impacting power, performance, and app compatibility (e.g. protected content). -->
+    <bool name="config_reduceBrightColorsAvailable">false</bool>
+
 </resources>
