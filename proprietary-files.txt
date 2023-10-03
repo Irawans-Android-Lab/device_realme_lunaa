@@ -1038,6 +1038,13 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
+# Thermal engine
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+vendor/etc/thermal-engine.conf
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+
 # Touchpanel firmware
 odm/firmware/tp/21603/FW_FT3518_SAMSUNG.img
 odm/firmware/tp/21603/FW_FT3518_SAMSUNG_FAE.img
