@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/realme/lunaa
+KERNEL_PATH := $(DEVICE_PATH)-kernel
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -30,6 +33,10 @@ PRODUCT_COPY_FILES += \
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_id_4630946741972277890.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946741972277890.xml
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PATH)/Image:kernel
 
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/oplus_chg/battery/mmi_charging_enable)
